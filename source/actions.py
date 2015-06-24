@@ -9,17 +9,16 @@ def get_links(driver):
 import os.path
 
 def write_lit(kod):
-    if "DVD" in lit:
-        return
+    
     filename = "../lit/kod_lit_spanish_trans.txt"
 
     if os.path.isfile(filename):
         f = open(filename, "a")
-        f.write(" ")
+        f.write(kod['title'] + " " + str(kod['id']) + "\n" + kod['lits'])
         f.close() 
     else:
         f = open(filename, "w")
-        f.write()
+        f.write(kod['title'] + " " + str(kod['id']) + "\n" + kod['lits'])
         f.close()
 
 import re

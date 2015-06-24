@@ -23,7 +23,6 @@ for i in range(1,2):
         if kod == 0:
             continue
         else:
-            print(kod)
-            print("\n")
+            write_lit(kod)
 
 driver.quit()
